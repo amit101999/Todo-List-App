@@ -1,0 +1,127 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.todoApp {
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 50px auto;
+  padding-top: 20px;
+  width: 50vw;
+  box-shadow: 8px 8px 2px 1px #dbd8d7;
+}
+
+.heading {
+  font-size: 30px;
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 60px;
+  animation: wordAnimation 5s ease-in-out infinite;
+}
+
+.addTodo {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  padding: 0 5px;
+  margin: auto;
+}
+
+.addTodo > input {
+  margin-right: 10px;
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  outline: none;
+  background-color: none;
+  border-bottom: 1px solid grey;
+  position: relative;
+  cursor: pointer;
+}
+
+.add:hover,
+.heading > i:hover,
+.todoItems i:hover {
+  animation: scaleAnimation 2s ease-in-out;
+  cursor: pointer;
+  color: grey;
+}
+
+.todoItems .items {
+  border-bottom: 1px solid grey;
+  width: 70%;
+  display: flex;
+  margin: 20px auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.items > div > input {
+  width: 20px;
+  height: 20px;
+}
+.items > div > span {
+  font-size: 22px;
+  text-align: justify;
+  margin-right: 15px;
+}
+
+.tasks {
+  display: flex;
+  font-size: 17px;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
+#notification .success,
+#notification .delete,
+#notification .empty {
+  font-size: 18px;
+  position: absolute;
+  display: flex;
+  padding-left: 10px;
+  width: 250px;
+  height: 50px;
+  top: 10px;
+  right: 0px;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+}
+#notification i {
+  margin-left: 5px;
+}
+#notification .success {
+  background-color: green;
+}
+
+#notification .delete {
+  background-color: red;
+}
+#notification .empty {
+  background-color: grey;
+}
+
+@keyframes scaleAnimation {
+  to {
+    transform: scale(140%);
+  }
+}
+
+@keyframes wordAnimation {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

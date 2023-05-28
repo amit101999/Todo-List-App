@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/619890c366.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="notification"></div>
+    <div class="todoApp">
+      <!-- Heading of the Project  -->
+      <header class="heading">
+        <i class="fa-solid fa-clipboard-list" class="todoIcon"></i>
+        Write down all your Daily Activities...
+      </header>
+
+      <!-- Input component -->
+      <div class="addTodo">
+        <input type="text" placeholder="Write you daily tasks" id="todoText" />
+        <div class="addBtn">
+          <i class="fa-solid fa-circle-plus fa-2x add" id="add"></i>
+        </div>
+      </div>
+
+      <div class="todoItems"></div>
+
+      <!-- show things like total tasks, completed tasks ,reamining tasks  -->
+      <div class="tasks">
+        <p>Total Tasks : <span id="totaltasks">0</span></p>
+        <p>Tasks Remaining : <span id="remainingTasks">0</span></p>
+        <p>Tasks Completed : <span id="tasksCompleted">0</span></p>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./index.js"></script>
+</html>
